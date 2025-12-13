@@ -48,6 +48,10 @@ section {
   background-color: var(--color-beige);
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* TYPOGRAFIA */
 h1,
 h2,
@@ -125,7 +129,7 @@ a:hover {
 /* 1. NAGŁÓWEK / MENU NAWIGACYJNE */
 #header {
   background-color: var(--color-white);
-  padding: 15px 0;
+  padding: 8px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -134,34 +138,68 @@ a:hover {
 
 #header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.logo {
-  font-family: "Playfair Display", serif;
-  font-size: var(--font-size-h3);
-  color: var(--color-dark-grey);
-  font-weight: 700;
+.nav-placeholder-left {
+  width: 170px;
 }
 
-.main-menu ul {
+.main-menu-center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 2px solid var(--color-gold);
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: var(--font-size-p);
+  transition: all 0.3s;
+  text-align: center;
+  cursor: pointer;
+  width: 170px;
+}
+
+.main-menu-center ul {
   list-style: none;
   display: inline-flex;
-  margin-right: 20px;
+  margin: 0;
+  padding: 0;
 }
 
-.main-menu li {
-  margin: 0 15px;
+.main-menu-center li {
+  margin: 0;
 }
 
-.main-menu a {
+.main-menu-center a {
   color: var(--color-dark-grey);
+  padding: 5px 15px;
+  display: inline-block;
   font-weight: 400;
+  white-space: nowrap;
 }
 
-.main-menu a:hover {
+.main-menu-center a:hover {
   color: var(--color-gold);
+}
+
+.logo-in-menu {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  color: var(--color-dark-grey) !important;
+  font-weight: 700;
+  padding: 0 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.logo-in-menu:hover {
+  color: var(--color-gold) !important;
 }
 
 /* 2. HERO (sekcja tytułowa) */
@@ -171,10 +209,9 @@ a:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden; /* KLUCZOWE! Zapobiega poziomemu scrollowi, co eliminuje błąd "rozjeżdżania się" */
+  overflow: hidden;
 }
 
-/* NOWY, POPRAWIONY KOD DLA WIDEO TŁA */
 .hero-video-container {
   position: absolute;
   top: 0;
@@ -186,7 +223,6 @@ a:hover {
 }
 
 .hero-video {
-  /* Kluczowe reguły: wypełnienie i centrowanie */
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -195,10 +231,9 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  object-fit: cover; /* KLUCZOWE */
+  object-fit: cover;
 }
 
-/* Przyciemnienie dla lepszej czytelności tekstu */
 .hero-video-container::after {
   content: "";
   position: absolute;
@@ -209,18 +244,17 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
-/* KONIEC NOWYCH REGUŁ DLA WIDEO */
 
 .hero-content {
   position: relative;
-  z-index: 3; /* Upewniamy się, że treść jest nad wideo i overlayem */
+  z-index: 3;
   text-align: center;
   color: var(--color-white);
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .hero-content h1 {
-  font-size: 64px; /* Większy H1 dla HERO */
+  font-size: 64px;
   color: var(--color-white);
 }
 
@@ -270,7 +304,7 @@ a:hover {
   font-size: var(--font-size-small);
 }
 
-/* 4. NASZE USŁUGI (Oferta) */
+/* 4. NASZE USŁUGI (OFERTA) */
 .service-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -326,7 +360,7 @@ a:hover {
   font-size: var(--font-size-p);
 }
 
-/* 6. USP (WYRÓŻNIKI / DLACZEGO MY?) */
+/* 6. USP (DLACZEGO MY?) */
 .usp-section {
   background-color: var(--color-white);
 }
@@ -355,7 +389,36 @@ a:hover {
   margin-bottom: 0;
 }
 
-/* 7. FORMULARZ KONTAKTOWY */
+/* 7. FAQ STYLES */
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: var(--color-white);
+  padding: 20px 25px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.faq-item h3 {
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: var(--font-size-p);
+  font-weight: 600;
+  color: var(--color-dark-grey);
+  margin-bottom: 10px;
+}
+
+.faq-item p {
+  font-size: var(--font-size-small);
+  color: var(--color-light-grey);
+  margin-bottom: 0;
+}
+
+/* 8. FORMULARZ KONTAKTOWY */
 .form-section {
   background-color: var(--color-beige);
 }
@@ -377,7 +440,7 @@ a:hover {
 }
 
 .form-group {
-  width: 48%; /* Dwie kolumny */
+  width: 48%;
   margin-bottom: 20px;
 }
 
@@ -422,7 +485,6 @@ textarea:focus {
   margin-top: -15px;
 }
 
-/* Checkboxy usług */
 .service-checkboxes {
   border: none;
   padding: 0;
@@ -447,7 +509,6 @@ textarea:focus {
   margin-right: 15px;
 }
 
-/* RODO */
 .rodo-consent {
   display: flex;
   align-items: flex-start;
@@ -471,7 +532,7 @@ textarea:focus {
   border: none;
 }
 
-/* 8. STOPKA */
+/* 9. STOPKA */
 #footer {
   padding: 40px 0;
   color: var(--color-dark-grey);
@@ -501,8 +562,15 @@ textarea:focus {
   display: block;
 }
 
-.social-media {
-  text-align: center;
+.col.social-media {
+  text-align: left;
+}
+
+/* KONTENER DLA IKON SOCIAL MEDIA - GWARANTUJE UKŁAD W LINII POZIOMEJ */
+.social-media-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .social-icon {
@@ -514,7 +582,7 @@ textarea:focus {
   color: var(--color-white);
   border-radius: 50%;
   text-align: center;
-  margin: 0 5px 10px;
+  margin: 0;
   font-weight: 700;
 }
 
@@ -543,23 +611,42 @@ textarea:focus {
     --font-size-h2: 30px;
   }
 
+  /* NAGŁÓWEK NA MOBILE: Zmiana na kolumnowy */
   #header .container {
     flex-direction: column;
+    justify-content: center;
   }
 
-  .main-menu ul {
-    margin: 15px 0;
+  .nav-placeholder-left {
+    display: none;
+  }
+
+  .main-menu-center {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-menu-center ul {
+    margin: 10px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .main-menu li {
+  .main-menu-center li {
     margin: 5px 10px;
   }
 
+  .nav-logo-link {
+    display: none;
+  }
+
   .cta-button {
-    display: none; /* Ukrycie dodatkowego CTA na małych ekranach */
+    display: inline-block;
+    width: auto;
+    margin-top: 5px;
+    padding: 8px 18px;
+    text-align: center;
   }
 
   .onas-grid {
@@ -567,7 +654,7 @@ textarea:focus {
   }
 
   .form-group {
-    width: 100%; /* Jedna kolumna na mobile */
+    width: 100%;
   }
 
   .footer-grid {
@@ -582,6 +669,16 @@ textarea:focus {
 
   #footer h3 {
     text-align: center;
+  }
+
+  /* Centrowanie ikon social media na mobile */
+  .col.social-media {
+    text-align: center;
+  }
+
+  .social-media-icons {
+    justify-content: center;
+    margin: 0 auto 10px auto;
   }
 
   .legal {
@@ -604,7 +701,7 @@ textarea:focus {
   .usp-grid {
     grid-template-columns: 1fr;
   }
-  /* POPRAWKA RODO */
+
   .rodo-consent {
     flex-wrap: wrap;
   }
