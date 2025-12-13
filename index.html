@@ -3,356 +3,389 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Drona eventowa - Live Food Stations</title>
-
+    <title>DRONA EVENTOWA - Ekskluzywny Catering Eventowy</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <header id="header">
       <div class="container">
-        <div class="logo">DRONA EVENTOWA</div>
-        <nav class="main-menu">
+        <div class="nav-placeholder-left"></div>
+
+        <nav class="main-menu-center">
           <ul>
-            <li><a href="#hero">Start</a></li>
             <li><a href="#onas">O nas</a></li>
             <li><a href="#oferta">Oferta</a></li>
+            <li class="nav-logo-link">
+              <a href="#hero" class="logo-in-menu">DRONA EVENTOWA</a>
+            </li>
             <li><a href="#realizacje">Realizacje</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
           </ul>
-          <a href="#kontakt" class="cta-button">Zapytaj o dostępność</a>
         </nav>
+
+        <a href="#kontakt" class="cta-button">Zapytaj o dostępność</a>
       </div>
     </header>
 
-    <main>
-      <section id="hero" class="section-hero">
-        <div class="hero-video-container">
-          <video autoplay muted loop playsinline class="hero-video">
-            <source src="hero.mp4" type="video/mp4" />
-            Twój browser nie wspiera tagu wideo.
-          </video>
+    <section id="hero" class="section-hero">
+      <div class="hero-video-container">
+        <video class="hero-video" autoplay loop muted playsinline>
+          <source src="hero.mp4" type="video/mp4" />
+          Twoja przeglądarka nie obsługuje wideo.
+        </video>
+      </div>
+      <div class="hero-content container">
+        <h1>Catering Eventowy na Nowo</h1>
+        <p class="subtitle">
+          Niepowtarzalne dania prosto z mobilnych stacji, dostarczone w
+          najbardziej wymagające miejsca.
+        </p>
+        <div class="cta-group">
+          <a href="#oferta" class="cta-primary">Poznaj naszą ofertę</a>
+          <a href="#kontakt" class="cta-secondary">Zapytaj o wycenę</a>
         </div>
-        <div class="hero-content container" data-aos="fade-up">
-          <h1>Drona na Twojej imprezie</h1>
-          <p class="subtitle">
-            Mobilne stacje live food - pancake bar, lody włoskie, mini board
-            station
-          </p>
-          <div class="cta-group">
-            <a href="#oferta" class="cta-primary">Sprawdź ofertę</a>
-            <a href="#kontakt" class="cta-secondary">Poproś wycenę</a>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="onas" class="section-content beige-background">
-        <div class="container">
-          <div class="onas-grid">
-            <div class="onas-text" data-aos="fade-right">
-              <h2>O nas</h2>
-              <p>
-                Jesteśmy zespołem pasjonatów eventów i doskonałej kuchni.
-                Stworzyliśmy koncept "Drona eventowa", aby dostarczać
-                <strong>niepowtarzalne doznania kulinarne</strong> w najbardziej
-                wymagających lokalizacjach. Od małych, prywatnych uroczystości
-                po duże pikniki firmowe – dojeżdżamy wszędzie z naszymi
-                mobilnymi stacjami.
-              </p>
-              <p>
-                Kierujemy się <strong>profesjonalizmem</strong>, używając
-                wyłącznie <strong>premium składników</strong>, gwarantując
-                najwyższą jakość obsługi. Nasza misja to sprawić, by ten element
-                Twojego eventu był w 100% dopracowany i niezapomniany.
-              </p>
-              <div class="attributes">
-                <span>✅ Profesjonalizm</span>
-                <span>✅ Jakość</span>
-                <span>✅ Unikatowość</span>
-              </div>
-            </div>
-            <div class="onas-photo" data-aos="fade-left">
-              [Zdjęcie zespołu lub stacji w działaniu]
+    <section id="onas" class="beige-background">
+      <div class="container">
+        <h2>O nas</h2>
+        <div class="onas-grid">
+          <div class="onas-text">
+            <p>
+              Jesteśmy zespołem pasjonatów eventów i doskonałej kuchni.
+              Stworzyliśmy koncept **"Drona Eventowa"**, aby dostarczać
+              **niepowtarzalne doznania kulinarne** w najbardziej wymagających
+              lokalizacjach. Od małych, prywatnych uroczystości po duże pikniki
+              firmowe – dojeżdżamy wszędzie z naszymi mobilnymi stacjami.
+            </p>
+            <p>
+              Kierujemy się **profesjonalizmem**, używając wyłącznie **premium
+              składników**, gwarantując najwyższą jakość obsługi. Nasza misja to
+              sprawić, by ten element Twojego eventu był w 100% dopracowany i
+              niezapomniany.
+            </p>
+            <div class="attributes">
+              <span>Profesjonalizm</span>
+              <span>Jakość</span>
+              <span>Unikatowość</span>
             </div>
           </div>
+          <div class="onas-photo">[Zdjęcie zespołu lub stacji w działaniu]</div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="oferta" class="section-content">
-        <div class="container">
-          <h2 data-aos="fade-down">Nasze Usługi</h2>
-          <div class="service-cards-grid">
-            <div class="card" data-aos="fade-up" data-aos-delay="0">
-              <div class="card-photo">[Zdjęcie stacji]</div>
-              <h3>Live Mini Board Station</h3>
-              <p>
-                Nasza stacja Live Mini Board to idealne połączenie sztuki i
-                gastronomii. Oferujemy ręcznie robione, spersonalizowane deski
-                pełne serów, wędlin, owoców i domowych konfitur, które
-                przygotowujemy na żywo na Twoich oczach. Jest to **wyjątkowo
-                elegancka i nowoczesna atrakcja**.
-              </p>
-              <div class="card-features">
-                <ul>
-                  <li>Sery rzemieślnicze</li>
-                  <li>Sezonowe owoce</li>
-                  <li>Serwowanie na naturalnych deskach</li>
-                </ul>
-              </div>
-              <a href="#kontakt" class="card-button">Dowiedz się więcej</a>
+    <section id="oferta">
+      <div class="container">
+        <h2>Nasza Oferta</h2>
+        <p class="text-center">
+          Wybierz jeden z naszych unikatowych konceptów mobilnego cateringu.
+        </p>
+        <div class="service-cards-grid">
+          <div class="card">
+            <div class="card-photo">[Miniaturka]</div>
+            <h3>Slow BBQ Grill</h3>
+            <p>
+              Wolno grillowane mięsa, wędzone na naturalnym drewnie. Prawdziwa
+              uczta dla smakoszy.
+            </p>
+            <div class="card-features">
+              <ul>
+                <li>Autorskie marynaty</li>
+                <li>Obsługa szefa kuchni</li>
+                <li>Serwis gorący przez 4 godziny</li>
+              </ul>
             </div>
+            <a href="#kontakt" class="card-button">Wycena BBQ</a>
+          </div>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="200">
-              <div class="card-photo">[Zdjęcie stacji]</div>
-              <h3>Pancake Bar</h3>
-              <p>
-                Pancake Bar to idealny wybór, gdy chcesz zaserwować gościom
-                pyszny deser w luźniejszej, ale wciąż premium formie.
-                Przygotowujemy chrupiące, amerykańskie pancakesy na miejscu,
-                podawane z szeroką gamą świeżych dodatków. Zapewniamy
-                **kompleksową obsługę od A do Z**.
-              </p>
-              <div class="card-features">
-                <ul>
-                  <li>Możliwość wyboru ciasta</li>
-                  <li>Ponad 15 dodatków</li>
-                  <li>Nielimitowane porcje</li>
-                </ul>
-              </div>
-              <a href="#kontakt" class="card-button">Dowiedz się więcej</a>
+          <div class="card">
+            <div class="card-photo">[Miniaturka]</div>
+            <h3>Premium Wok & Azja</h3>
+            <p>
+              Orientalne smaki przygotowywane na żywo w mobilnych woka. Show
+              cooking i świeżość.
+            </p>
+            <div class="card-features">
+              <ul>
+                <li>Składniki sprowadzane z Azji</li>
+                <li>Wegańskie i wegetariańskie opcje</li>
+                <li>Szybki serwis na duże eventy</li>
+              </ul>
             </div>
+            <a href="#kontakt" class="card-button">Wycena Wok</a>
+          </div>
 
-            <div class="card" data-aos="fade-up" data-aos-delay="400">
-              <div class="card-photo">[Zdjęcie stacji]</div>
-              <h3>Lody włoskie</h3>
-              <p>
-                Nic tak nie orzeźwia w upalny dzień jak kremowe, prawdziwe lody
-                włoskie. Nasza mobilna lodziarnia to gwarancja najwyższej
-                jakości. Obsługujemy eventy za pomocą **profesjonalnych maszyn i
-                naturalnych składników**, oferując szeroki wybór smaków. Jest to
-                niezawodny wybór dla gości w każdym wieku.
-              </p>
-              <div class="card-features">
-                <ul>
-                  <li>Dwa smaki lodu + mix</li>
-                  <li>Kolorowe posypki</li>
-                  <li>Ekologiczne kubeczki/rożki</li>
-                </ul>
-              </div>
-              <a href="#kontakt" class="card-button">Dowiedz się więcej</a>
+          <div class="card">
+            <div class="card-photo">[Miniaturka]</div>
+            <h3>Desery Fine Dining</h3>
+            <p>
+              Mobilna stacja z ekskluzywnymi deserami, przygotowywanymi przez
+              cukierników.
+            </p>
+            <div class="card-features">
+              <ul>
+                <li>Mini tarty i monoporcje</li>
+                <li>Owoce i czekoladowa fontanna</li>
+                <li>Możliwość personalizacji</li>
+              </ul>
             </div>
+            <a href="#kontakt" class="card-button">Wycena Deserów</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="realizacje" class="section-content beige-background">
-        <div class="container">
-          <h2 data-aos="fade-down">Realizacje</h2>
-          <div
-            class="gallery-placeholder"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            [Galeria zdjęć z eventów (8-12 zdjęć) z Lightbox]
+    <section id="realizacje" class="beige-background">
+      <div class="container">
+        <h2>Nasze Realizacje</h2>
+        <p>
+          Zobacz, jak wygląda catering w naszym wykonaniu na dużych eventach i
+          kameralnych przyjęciach.
+        </p>
+        <div class="gallery-placeholder">
+          [Miejsce na galerię zdjęć / wideo z eventów]
+        </div>
+      </div>
+    </section>
+
+    <section id="dlaczego-my">
+      <div class="container">
+        <h2>Dlaczego warto wybrać Drona Eventowa?</h2>
+        <div class="usp-grid">
+          <div class="usp-item">
+            <span class="icon">🚀</span>
+            <h3>Pełna mobilność</h3>
+            <p>
+              Dotrzemy wszędzie. Nasze stacje są niezależne i nie wymagają
+              dostępu do infrastruktury.
+            </p>
+          </div>
+          <div class="usp-item">
+            <span class="icon">👨‍🍳</span>
+            <h3>Live Cooking Show</h3>
+            <p>
+              Gotujemy na żywo przed gośćmi. To nie tylko jedzenie, to
+              interaktywne widowisko.
+            </p>
+          </div>
+          <div class="usp-item">
+            <span class="icon">✨</span>
+            <h3>Unikatowe menu</h3>
+            <p>
+              Nie korzystamy ze stałych szablonów. Każde menu jest dopasowane do
+              Twojego eventu.
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="usp" class="section-content usp-section">
-        <div class="container">
-          <h2 data-aos="fade-down">Dlaczego my?</h2>
-          <div class="usp-grid">
-            <div class="usp-item" data-aos="fade-up" data-aos-delay="0">
-              <span class="icon">📍</span>
-              <h3>Mobilne stacje</h3>
-              <p>Dojeżdżamy wszędzie, niezależnie od lokalizacji eventu.</p>
-            </div>
-            <div class="usp-item" data-aos="fade-up" data-aos-delay="100">
-              <span class="icon">⭐</span>
-              <h3>Premium składniki</h3>
-              <p>
-                Gwarantujemy najwyższą jakość serwowanych produktów i
-                materiałów.
-              </p>
-            </div>
-            <div class="usp-item" data-aos="fade-up" data-aos-delay="200">
-              <span class="icon">👔</span>
-              <h3>Profesjonalny obsadzenie</h3>
-              <p>Nasz doświadczony zespół zapewni płynną i miłą obsługę.</p>
-            </div>
-            <div class="usp-item" data-aos="fade-up" data-aos-delay="300">
-              <span class="icon">👍</span>
-              <h3>Doświadczenie i rekomendacje</h3>
-              <p>Lata pracy w branży eventowej i zadowoleni klienci.</p>
-            </div>
-            <div class="usp-item" data-aos="fade-up" data-aos-delay="400">
-              <span class="icon">🔄</span>
-              <h3>Elastyczne dostosowanie</h3>
-              <p>
-                Indywidualnie dostosowujemy ofertę do Twoich potrzeb i budżetu.
-              </p>
-            </div>
-            <div class="usp-item" data-aos="fade-up" data-aos-delay="500">
-              <span class="icon">✅</span>
-              <h3>Kompleksowa obsługa</h3>
-              <p>
-                Zajmujemy się wszystkim od A do Z, od transportu po sprzątanie.
-              </p>
-            </div>
+    <section id="faq" class="beige-background">
+      <div class="container">
+        <h2>Najczęściej Zadawane Pytania</h2>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <h3>Jak daleko możecie dojechać z Waszą "Droną Eventową"?</h3>
+            <p>
+              Obsługujemy wydarzenia w całej Polsce, a w przypadku większych
+              imprez, jesteśmy otwarci na wyjazdy zagraniczne. Nasze mobilne
+              stanowiska pozwalają nam dotrzeć do niemal każdej, nawet
+              najbardziej wymagającej lokalizacji – od centrum miasta po odległe
+              tereny piknikowe.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Czy oferujecie opcje wegetariańskie/wegańskie/bezglutenowe?</h3>
+            <p>
+              Tak! Nasze menu jest w pełni elastyczne i dostosowujemy je do
+              wymagań dietetycznych gości. W trakcie planowania menu z Klientem,
+              zawsze proponujemy szeroki wybór opcji wege, wegańskich oraz dań
+              bez glutenu, używając specjalnie dedykowanych składników.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Jakie są wymagania techniczne na miejscu eventu?</h3>
+            <p>
+              Nasze mobilne stacje są w dużej mierze samowystarczalne.
+              Potrzebujemy jedynie stabilnej, równej powierzchni. Dostęp do
+              prądu jest mile widziany, ale posiadamy własne ciche generatory,
+              które możemy uruchomić w razie potrzeby.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Jaki jest minimalny czas rezerwacji?</h3>
+            <p>
+              Zalecamy rezerwację na minimum 2-3 miesiące przed planowaną datą,
+              szczególnie w sezonie letnim, aby zagwarantować dostępność
+              terminów i najlepszych składników. Oczywiście, w miarę możliwości
+              obsługujemy także last minute!
+            </p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="kontakt" class="section-content form-section">
-        <div class="container" data-aos="fade-up">
-          <h2>Wyślij zapytanie o wycenę</h2>
-          <form class="contact-form">
-            <p class="required-note">Pola oznaczone * są wymagane.</p>
+    <section id="kontakt">
+      <div class="container">
+        <div class="contact-form">
+          <h2>Skontaktuj się z nami</h2>
 
+          <div class="form-group full-width">
+            <p class="text-center">
+              Opowiedz nam o swoim wydarzeniu, a my przygotujemy
+              spersonalizowaną ofertę.
+            </p>
+          </div>
+
+          <form action="#" method="post">
             <div class="form-group">
-              <label for="name">Imię i nazwisko *</label>
+              <label for="name">Imię i nazwisko / Nazwa firmy *</label>
               <input type="text" id="name" name="name" required />
             </div>
 
             <div class="form-group">
-              <label for="email">Email *</label>
+              <label for="email">Adres e-mail *</label>
               <input type="email" id="email" name="email" required />
             </div>
 
             <div class="form-group">
-              <label for="phone">Telefon *</label>
-              <input type="tel" id="phone" name="phone" required />
+              <label for="phone">Telefon kontaktowy</label>
+              <input type="tel" id="phone" name="phone" />
             </div>
 
             <div class="form-group">
-              <label for="event-date">Data imprezy</label>
-              <input type="date" id="event-date" name="event-date" />
+              <label for="date">Data eventu *</label>
+              <input type="date" id="date" name="date" required />
             </div>
 
             <div class="form-group">
-              <label for="event-type">Rodzaj imprezy</label>
-              <select id="event-type" name="event-type">
-                <option value="">Wybierz...</option>
-                <option value="wesele">Wesele</option>
-                <option value="firmowa">Impreza firmowa</option>
-                <option value="urodziny">Urodziny</option>
-                <option value="inne">Inne</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="guests">Liczba osób</label>
+              <label for="guests">Szacowana liczba gości *</label>
               <input
                 type="number"
                 id="guests"
                 name="guests"
                 min="10"
-                placeholder="Minimum 10 osób"
+                required
               />
             </div>
 
-            <fieldset class="form-group service-checkboxes">
-              <legend>Interesująca usługa:</legend>
+            <div class="form-group">
+              <label for="location">Lokalizacja eventu (Miasto/Kod)</label>
+              <input type="text" id="location" name="location" />
+            </div>
+
+            <fieldset class="service-checkboxes">
+              <legend>Interesujące Cię usługi:</legend>
               <div class="checkbox-group">
-                <input
-                  type="checkbox"
-                  id="pancake"
-                  name="service"
-                  value="Pancake Bar"
-                />
-                <label for="pancake">Pancake Bar</label>
+                <input type="checkbox" id="bbq" name="service" value="BBQ" />
+                <label for="bbq">Slow BBQ Grill</label>
 
-                <input type="checkbox" id="lody" name="service" value="Lody" />
-                <label for="lody">Lody włoskie</label>
+                <input type="checkbox" id="wok" name="service" value="Wok" />
+                <label for="wok">Premium Wok & Azja</label>
 
                 <input
                   type="checkbox"
-                  id="board"
+                  id="desery"
                   name="service"
-                  value="Board Station"
+                  value="Desery"
                 />
-                <label for="board">Live Mini Board Station</label>
+                <label for="desery">Desery Fine Dining</label>
               </div>
             </fieldset>
 
             <div class="form-group full-width">
-              <label for="message">Wiadomość</label>
+              <label for="message">Wiadomość / Dodatkowe uwagi *</label>
               <textarea
                 id="message"
                 name="message"
                 rows="5"
-                placeholder="Opisz szczegółowo swoje zapytanie..."
+                required
               ></textarea>
             </div>
 
-            <div class="form-group full-width rodo-consent">
+            <div class="required-note full-width">* Pola wymagane</div>
+
+            <div class="rodo-consent full-width">
               <input type="checkbox" id="rodo" name="rodo" required />
               <label for="rodo"
-                >Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
-                odpowiedzi na moje zapytanie. *</label
+                >Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
+                <a href="#">Polityką Prywatności</a> w celu obsługi
+                zapytania.</label
               >
             </div>
 
-            <div class="full-width">
-              <p class="recaptcha-note">
-                Ta strona jest chroniona przez reCAPTCHA v3.
-              </p>
-              <button type="submit" class="cta-primary">
-                Wyślij zapytanie
-              </button>
+            <div class="recaptcha-note full-width">
+              Chronione przez reCAPTCHA. Obowiązują
+              <a href="#">Polityka Prywatności</a> i
+              <a href="#">Warunki Usługi</a> Google.
             </div>
+
+            <button type="submit" class="cta-primary">Wyślij Zapytanie</button>
           </form>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
     <footer id="footer" class="beige-background">
       <div class="container footer-grid">
-        <div class="col contact-info">
+        <div class="col info">
+          <h3>DRONA EVENTOWA</h3>
+          <p>Ekskluzywny Catering Mobilny</p>
+          <p>&copy; 2025 Wszelkie prawa zastrzeżone.</p>
+        </div>
+
+        <div class="col contact-footer">
           <h3>Kontakt</h3>
-          <p>Telefon: [do wpisania]</p>
-          <p>Email: [do wpisania]</p>
-          <p>Adres: [do wpisania]</p>
+          <p>Telefon: <a href="tel:+48123456789">+48 123 456 789</a></p>
+          <p>
+            Email:
+            <a href="mailto:kontakt@dronaeventowa.pl"
+              >kontakt@dronaeventowa.pl</a
+            >
+          </p>
+          <p>Adres: ul. Cateringowa 5, 01-234 Warszawa</p>
+        </div>
+
+        <div class="col links">
+          <h3>Szybkie linki</h3>
+          <a href="#onas">O nas</a>
+          <a href="#oferta">Oferta</a>
+          <a href="#faq">FAQ</a>
         </div>
 
         <div class="col social-media">
           <h3>Social Media</h3>
-          <a
-            href="[do wpisania URL Facebook]"
-            target="_blank"
-            aria-label="Facebook"
-            class="social-icon"
-            >F</a
-          >
-          <a
-            href="[do wpisania URL Instagram]"
-            target="_blank"
-            aria-label="Instagram"
-            class="social-icon"
-            >I</a
-          >
-          <p>Śledź nasze najnowsze realizacje!</p>
-        </div>
-
-        <div class="col legal">
-          <p>&copy; 2025 Drona eventowa. Wszelkie prawa zastrzeżone.</p>
-          <a href="#">Polityka prywatności</a>
+          <div class="social-media-icons">
+            <a href="#" class="social-icon" title="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon" title="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" class="social-icon" title="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
         </div>
       </div>
-    </footer>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 800,
-        once: false,
-        offset: 200, // Utrzymujemy offset, aby aktywacja była bardziej stabilna
-      });
-    </script>
+      <div class="container">
+        <p class="legal">Projekt i wykonanie: [Twoja nazwa/agencja]</p>
+      </div>
+    </footer>
   </body>
 </html>
