@@ -1,5 +1,3 @@
-/* Plik: style.css */
-
 /* 4. PALETA KOLORÓW */
 :root {
   --color-white: #ffffff; /* Biel, tło główne */
@@ -107,6 +105,7 @@ a:hover {
 .cta-primary {
   background-color: var(--color-gold);
   color: var(--color-white);
+  border-color: var(--color-gold);
 }
 
 .cta-primary:hover {
@@ -119,6 +118,7 @@ a:hover {
   background-color: transparent;
   color: var(--color-gold);
   margin-left: 10px;
+  border-color: var(--color-gold);
 }
 
 .cta-secondary:hover {
@@ -134,6 +134,7 @@ a:hover {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s;
 }
 
 #header .container {
@@ -142,6 +143,7 @@ a:hover {
   justify-content: space-between;
 }
 
+/* Domyślny placeholder musi być tej samej szerokości co CTA */
 .nav-placeholder-left {
   width: 170px;
 }
@@ -151,17 +153,8 @@ a:hover {
   text-align: center;
 }
 
+/* Przycisk CTA ma taką samą szerokość jak placeholder */
 .cta-button {
-  display: inline-block;
-  padding: 8px 18px;
-  border: 2px solid var(--color-gold);
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: var(--font-size-p);
-  transition: all 0.3s;
-  text-align: center;
-  cursor: pointer;
   width: 170px;
 }
 
@@ -188,7 +181,8 @@ a:hover {
   color: var(--color-gold);
 }
 
-.logo-in-menu {
+/* Logo - domyślny wygląd */
+.site-logo {
   font-family: "Playfair Display", serif;
   font-size: 22px;
   color: var(--color-dark-grey) !important;
@@ -196,10 +190,33 @@ a:hover {
   padding: 0 20px;
   text-transform: uppercase;
   white-space: nowrap;
+  transition: all 0.3s;
 }
 
-.logo-in-menu:hover {
+.site-logo:hover {
   color: var(--color-gold) !important;
+}
+
+/* Slogan - domyślnie ukryty */
+.header-slogan {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: var(--color-dark-grey);
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0;
+  display: none; /* Ukryty, zanim JS go pokaże */
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Klasa CSS dla animacji nagłówka - przykładowa */
+#header.scrolled {
+  /* Można zmienić padding lub box-shadow dla efektu "skurczenia" */
+  padding: 5px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* 2. HERO (sekcja tytułowa) */
@@ -210,8 +227,10 @@ a:hover {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  padding: 0; /* Usuń domyślny padding sekcji */
 }
 
+/* Wideo i overlay */
 .hero-video-container {
   position: absolute;
   top: 0;
@@ -245,6 +264,7 @@ a:hover {
   z-index: 2;
 }
 
+/* Treść na wideo */
 .hero-content {
   position: relative;
   z-index: 3;
@@ -268,6 +288,26 @@ a:hover {
   margin-top: 30px;
 }
 
+.hero-content .cta-primary {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+}
+
+.hero-content .cta-secondary {
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.hero-content .cta-primary:hover {
+  background-color: var(--color-sage);
+  border-color: var(--color-sage);
+}
+
+.hero-content .cta-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-dark-grey);
+}
+
 /* 3. O NAS */
 .onas-grid {
   display: flex;
@@ -280,14 +320,10 @@ a:hover {
   flex: 2;
 }
 
-.onas-text h2 {
-  text-align: left;
-}
-
 .onas-photo {
   flex: 1;
-  min-height: 300px;
-  background-color: #e0e0e0;
+  min-height: 350px;
+  background-color: var(--color-sage);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -302,9 +338,10 @@ a:hover {
   border-radius: 20px;
   margin-right: 10px;
   font-size: var(--font-size-small);
+  margin-top: 10px;
 }
 
-/* 4. NASZE USŁUGI (OFERTA) */
+/* 4. NASZA OFERTA (USŁUGI JAKO ZDJĘCIA/LINKI) */
 .service-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -312,52 +349,126 @@ a:hover {
   text-align: center;
 }
 
-.card {
-  background-color: var(--color-white);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.card-photo {
-  min-height: 200px;
-  background-color: #e0e0e0;
-  margin-bottom: 15px;
-}
-
-.card-features ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.card-features li {
-  font-size: var(--font-size-small);
-  color: var(--color-light-grey);
-}
-
-.card-button {
+/* Karta usługi staje się linkiem - styl linku musi być resetowany */
+.service-card-link {
+  text-decoration: none;
   display: block;
-  margin-top: 20px;
-  padding: 10px;
-  background-color: var(--color-gold);
-  color: var(--color-white);
-  border-radius: 5px;
+  color: inherit;
 }
 
-.card-button:hover {
-  background-color: var(--color-sage);
-  color: var(--color-dark-grey);
+.service-card-photo-link {
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* 5. PORTFOLIO / REALIZACJE */
-.gallery-placeholder {
-  min-height: 400px;
-  background-color: #e0e0e0;
+.service-card-photo-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Główny kontener zdjęcia */
+.card-photo {
+  min-height: 400px; /* Wysokość zdjęcia/karty */
+  background-color: #555;
+  background-size: cover;
+  background-position: center;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--font-size-p);
+  transition: all 0.5s;
+}
+
+/* Pseudo-tła dla przykładu (do usunięcia, gdy będą prawdziwe zdjęcia) */
+.service-photo-1 {
+  background-image: url("placeholder-bbq.jpg");
+}
+.service-photo-2 {
+  background-image: url("placeholder-wok.jpg");
+}
+.service-photo-3 {
+  background-image: url("placeholder-dessert.jpg");
+}
+
+/* Tekst nałożony na zdjęcie */
+.photo-overlay-text {
+  position: relative;
+  z-index: 2;
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: var(--color-white);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+}
+
+/* Overlay i efekt przyciemnienia */
+.card-photo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+  z-index: 1;
+}
+
+.service-card-photo-link:hover .card-photo::after {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* 5. PORTFOLIO / REALIZACJE (Dynamiczna Galeria) */
+.dynamic-gallery {
+  overflow: hidden; /* Ukrywa zawartość wystającą poza widok */
+  margin-top: 40px;
+}
+
+.gallery-track {
+  display: flex;
+  /* Szerokość musi być wystarczająco duża, by elementy wychodziły poza widok */
+  width: 250%;
+  animation: scroll-gallery 60s linear infinite; /* Przykładowa animacja */
+}
+
+@keyframes scroll-gallery {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66%);
+  } /* Przewinięcie 2/3 szerokości */
+}
+
+/* Element zdjęcia z efektem BW/Kolor */
+.gallery-item {
+  min-width: 400px;
+  height: 300px;
+  background-color: #777;
+  margin-right: 20px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  /* Efekt: Domyślnie czarno-białe (grayscale) */
+  filter: grayscale(100%);
+  transition: filter 0.5s ease-in-out, transform 0.3s;
+}
+
+.gallery-item:hover {
+  /* Efekt: Po najechaniu kolorowe */
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.gallery-note {
+  text-align: center;
+  font-size: var(--font-size-small);
+  color: var(--color-light-grey);
+  margin-top: 20px;
 }
 
 /* 6. USP (DLACZEGO MY?) */
@@ -401,6 +512,7 @@ a:hover {
   margin-bottom: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid var(--color-gold); /* Akcent */
 }
 
 .faq-item h3 {
@@ -419,7 +531,7 @@ a:hover {
 }
 
 /* 8. FORMULARZ KONTAKTOWY */
-.form-section {
+#kontakt {
   background-color: var(--color-beige);
 }
 
@@ -440,7 +552,7 @@ a:hover {
 }
 
 .form-group {
-  width: 48%;
+  width: 48%; /* Ustawienie na dwie kolumny */
   margin-bottom: 20px;
 }
 
@@ -584,6 +696,7 @@ textarea:focus {
   text-align: center;
   margin: 0;
   font-weight: 700;
+  transition: all 0.3s;
 }
 
 .social-icon:hover {
@@ -593,6 +706,9 @@ textarea:focus {
 
 .legal {
   text-align: right;
+  margin-top: 20px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
 }
 
 /* RESPONSYWNOŚĆ */
@@ -617,8 +733,13 @@ textarea:focus {
     justify-content: center;
   }
 
-  .nav-placeholder-left {
-    display: none;
+  /* Ukryj elementy, które mają zniknąć przy małym ekranie */
+  .nav-placeholder-left,
+  .nav-logo-link {
+    display: none !important;
+  }
+  .header-slogan {
+    display: none !important; /* Ukryj na mobile, by nie zakłócał układu */
   }
 
   .main-menu-center {
@@ -637,10 +758,6 @@ textarea:focus {
     margin: 5px 10px;
   }
 
-  .nav-logo-link {
-    display: none;
-  }
-
   .cta-button {
     display: inline-block;
     width: auto;
@@ -654,7 +771,7 @@ textarea:focus {
   }
 
   .form-group {
-    width: 100%;
+    width: 100%; /* Formularz na jedną kolumnę */
   }
 
   .footer-grid {
@@ -714,5 +831,9 @@ textarea:focus {
     display: inline;
     flex-grow: 1;
     font-weight: 400;
+  }
+
+  .gallery-item {
+    min-width: 100%;
   }
 }
