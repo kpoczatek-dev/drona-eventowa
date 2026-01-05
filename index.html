@@ -11,6 +11,8 @@
 		rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
 
 <body>
@@ -238,90 +240,95 @@
 		</div>
 	</section>
 
-	<section id="kontakt">
+	<section id="kontakt" class="beige-background">
 		<div class="container">
-			<div class="contact-form">
+			<form class="contact-form compact-form" id="contactForm">
 				<h2>Skontaktuj się z nami</h2>
 
-				<div class="form-group full-width">
-					<p class="text-center">
-						Opowiedz nam o swoim wydarzeniu, a my przygotujemy
-						spersonalizowaną ofertę.
-					</p>
+
+				<div class="form-group">
+					<label>Imię i nazwisko / Firma *</label>
+					<input type="text" name="name" id="name" required />
 				</div>
 
-				<form action="#" method="post">
-					<div class="form-group">
-						<label for="name">Imię i nazwisko / Nazwa firmy *</label>
-						<input type="text" id="name" name="name" required />
+				<div class="form-group">
+					<label>Adres e-mail *</label>
+					<input type="email" name="email" id="email" required />
+				</div>
+
+				<div class="form-group">
+					<label>Numer telefonu *</label>
+					<input type="tel" name="phone" id="phone" required />
+				</div>
+
+				<div class="form-group">
+					<label>Data eventu *</label>
+					<input type="date" name="date" id="date" required />
+				</div>
+
+				<div class="form-group">
+					<label>Liczba gości *</label>
+					<input type="number" name="guests" id="guests" min="10" required />
+				</div>
+
+				<div class="form-group full-width">
+					<label>Lokalizacja (miasto/woj.)</label>
+					<input type="text" name="location" id="location" />
+				</div>
+
+				<div class="form-group">
+					<label>Typ wydarzenia *</label>
+					<select name="event_type" id="event_type" required>
+						<option value="">Wybierz...</option>
+						<option>Ślub/wesele</option>
+						<option>Event firmowy</option>
+						<option>Event prywatny</option>
+						<option>Festiwal/piknik</option>
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label>Budżet catering *</label>
+					<select name="budget" id="budget" required>
+						<option value="">Wybierz...</option>
+						<option>do 5 000 zł</option>
+						<option>5-10 000 zł</option>
+						<option>10-25 000 zł</option>
+						<option>25-50 000 zł</option>
+						<option>powyżej 50 000 zł</option>
+					</select>
+				</div>
+
+				<fieldset class="service-checkboxes full-width">
+					<legend>Stacje jedzeniowe:</legend>
+					<div class="checkbox-group">
+						<label><input type="checkbox" name="service" id="bbq" value="Slow BBQ Grill"> Slow BBQ
+							Grill</label>
+						<label><input type="checkbox" name="service" id="wok" value="Premium Wok Azjatycki"> Premium Wok
+							Azjatycki</label>
+						<label><input type="checkbox" name="service" id="dessert" value="Sweet Station"> Sweet
+							Station</label>
+						<label><input type="checkbox" name="service" id="live" value="Live Cooking"> Live
+							Cooking</label>
 					</div>
+				</fieldset>
 
-					<div class="form-group">
-						<label for="email">Adres e-mail *</label>
-						<input type="email" id="email" name="email" required />
-					</div>
+				<div class="form-group full-width">
+					<label>Dodatkowe uwagi *</label>
+					<textarea name="message" id="message" rows="4" required
+						placeholder="Diety specjalne, godziny, oczekiwania..."></textarea>
+				</div>
 
-					<div class="form-group">
-						<label for="phone">Telefon kontaktowy</label>
-						<input type="tel" id="phone" name="phone" />
-					</div>
+				<div class="rodo-consent">
+					<input type="checkbox" name="rodo" id="rodo" required />
+					<label for="rodo">Zgoda RODO *</label>
+				</div>
 
-					<div class="form-group">
-						<label for="date">Data eventu *</label>
-						<input type="date" id="date" name="date" required />
-					</div>
-
-					<div class="form-group">
-						<label for="guests">Szacowana liczba gości *</label>
-						<input type="number" id="guests" name="guests" min="10" required />
-					</div>
-
-					<div class="form-group">
-						<label for="location">Lokalizacja eventu (Miasto/Kod)</label>
-						<input type="text" id="location" name="location" />
-					</div>
-
-					<fieldset class="service-checkboxes">
-						<legend>Interesujące Cię usługi:</legend>
-						<div class="checkbox-group">
-							<input type="checkbox" id="bbq" name="service" value="BBQ" />
-							<label for="bbq">Slow BBQ Grill</label>
-
-							<input type="checkbox" id="wok" name="service" value="Wok" />
-							<label for="wok">Premium Wok & Azja</label>
-
-							<input type="checkbox" id="desery" name="service" value="Desery" />
-							<label for="desery">Desery Fine Dining</label>
-						</div>
-					</fieldset>
-
-					<div class="form-group full-width">
-						<label for="message">Wiadomość / Dodatkowe uwagi *</label>
-						<textarea id="message" name="message" rows="5" required></textarea>
-					</div>
-
-					<div class="required-note full-width">* Pola wymagane</div>
-
-					<div class="rodo-consent full-width">
-						<input type="checkbox" id="rodo" name="rodo" required />
-						<label for="rodo">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z
-							<a href="#">Polityką Prywatności</a> w celu obsługi
-							zapytania.</label>
-					</div>
-
-					<div class="recaptcha-note full-width">
-						Chronione przez reCAPTCHA. Obowiązują
-						<a href="#">Polityka Prywatności</a> i
-						<a href="#">Warunki Usługi</a> Google.
-					</div>
-
-					<button type="submit" class="cta-primary">
-						Wyślij Zapytanie
-					</button>
-				</form>
-			</div>
+				<button type="submit" class="cta-primary">Wyślij Zgłoszenie</button>
+			</form>
 		</div>
 	</section>
+
 
 	<footer id="footer" class="beige-background">
 		<div class="container footer-grid">
@@ -408,6 +415,63 @@
 		window.addEventListener('scroll', handleScroll);
 		// Uruchom przy ładowaniu strony, w razie gdyby użytkownik odświeżył ją w środku przewijania
 		document.addEventListener('DOMContentLoaded', handleScroll);
+	</script>
+	<script>
+		(function () {
+			// ✅ TWOJE KLUCZE - NIE ZMIENIAJ!
+			const SERVICE_ID = 'service_51dzr7x';
+			const TEMPLATE_ID = 'template_fy1svxl';
+			const PUBLIC_KEY = 'A_B2uh1owkPMg9iBz';
+
+			emailjs.init(PUBLIC_KEY);
+
+			const form = document.getElementById('contactForm');
+			const submitBtn = form.querySelector('button[type="submit"]');
+			const originalText = submitBtn.innerHTML;
+
+			form.addEventListener('submit', function (event) {
+				event.preventDefault();
+
+				if (!validateForm()) return;
+
+				submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> WYSYŁAM...';
+				submitBtn.disabled = true;
+
+				// Zbierz zaznaczone checkboxy
+				const services = Array.from(form.querySelectorAll('input[name="service"]:checked'))
+					.map(cb => cb.value).join(', ');
+
+				emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form)
+					.then(function () {
+						alert('✅ Dziękujemy! Zgłoszenie wysłane. Oddzwonimy w 24h!');
+						form.reset();
+						submitBtn.innerHTML = originalText;
+						submitBtn.disabled = false;
+					}, function (error) {
+						console.error('BŁĄD:', error);
+						alert('❌ Błąd! Napisz bezpośrednio: kontakt@dronaeventowa.pl');
+						submitBtn.innerHTML = originalText;
+						submitBtn.disabled = false;
+					});
+			});
+
+			function validateForm() {
+				const guests = parseInt(document.getElementById('guests').value);
+				const rodo = document.getElementById('rodo').checked;
+
+				if (guests < 10) {
+					alert('❌ Minimum 10 gości!');
+					document.getElementById('guests').focus();
+					return false;
+				}
+				if (!rodo) {
+					alert('❌ Potwierdź zgodę RODO!');
+					document.getElementById('rodo').focus();
+					return false;
+				}
+				return true;
+			}
+		})();
 	</script>
 </body>
 
