@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raricart - Live Food Station</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Video Background -->
+    <div class="video-background" id="videoBg">
+        <video autoplay muted loop playsinline>
+            <source src="hero.mp4" type="video/mp4">
+            <!-- Fallback to image if video doesn't load -->
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="background-overlay" id="bg"></div>
+
+    <div class="brand-container" id="brand" onclick="scrollToTop()">
+        <img src="RARICART_logo_czarne.png" class="brand-logo" alt="Raricart" style="cursor:pointer">
+    </div>
+
+    <div class="new-brand" id="newBrand">RARICART<br>LIVE FOOD STATION</div>
+
+    <ul class="nav-links" id="nav">
+        <li><a href="#onas">O Nas</a></li>
+        <li><a href="#oferta">Oferta</a></li>
+        <li><a href="#dlaczego">Dlaczego My</a></li>
+        <li class="logo-spacer"></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#realizacje">Realizacje</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+
+    <div class="scroll-indicator" id="scroll">
+        Przewiń w dół<span class="scroll-arrow">↓</span>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="content">
+        <section id="onas" class="section">
+            <h2>O Nas</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>Jesteśmy zespołem pasjonatów eventów i doskonałej kuchni. Stworzyliśmy koncept <strong>"Drona
+                            Eventowa"</strong>, aby dostarczać <strong>niepowtarzalne doznania kulinarne</strong> w
+                        najbardziej wymagających lokalizacjach.</p>
+                    <p>Kierujemy się <strong>profesjonalizmem</strong>, używając wyłącznie <strong>premium
+                            składników</strong>.</p>
+                    <div class="badges">
+                        <div class="badge">Profesjonalizm</div>
+                        <div class="badge">Jakość</div>
+                        <div class="badge">Unikatowość</div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://media.istockphoto.com/id/1054319798/pl/zdj%C4%99cie/grupa-szcz%C4%99%C5%9Bliwych-przyjaci%C3%B3%C5%82-kt%C3%B3rzy-maj%C4%85-%C5%9Bniadanie-w-restauracji.jpg?s=1024x1024&w=is&k=20&c=MlyKTM7ihcyhawxrg9vBY32hsGf6FCz6iZlShh6JB2I="
+                        alt="Zespół Raricart">
+                </div>
+            </div>
+        </section>
+
+        <section id="oferta" class="section">
+            <h2>Nasza Oferta</h2>
+            <div class="offer-grid">
+                <div class="offer-card" data-offer="bbq">
+                    <div class="offer-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800');">
+                    </div>
+                    <div class="offer-content">
+                        <h3>Slow BBQ Grill</h3>
+                        <p>Długo wędzzone mięsa i aromatyczne pulled pork.</p>
+                    </div>
+                </div>
+
+                <div class="offer-card" data-offer="wok">
+                    <div class="offer-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800');">
+                    </div>
+                    <div class="offer-content">
+                        <h3>Premium Wok & Azja</h3>
+                        <p>Świeże warzywa i egzotyczne przyprawy.</p>
+                    </div>
+                </div>
+
+                <div class="offer-card" data-offer="dessert">
+                    <div class="offer-image"
+                        style="background-image: url('https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800');">
+                    </div>
+                    <div class="offer-content">
+                        <h3>Desery Fine Dining</h3>
+                        <p>Wykwintne desery na najwyższym poziomie.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dlaczego" class="section">
+            <h2>Dlaczego My?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📍</div>
+                    <h3>Mobilne stacje</h3>
+                    <p>Dojeżdżamy wszędzie.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>Premium składniki</h3>
+                    <p>Najwyższa jakość produktów.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👔</div>
+                    <h3>Profesjonalne obsadzenie</h3>
+                    <p>Doświadczony zespół.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👍</div>
+                    <h3>Doświadczenie</h3>
+                    <p>Lata pracy w branży.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Elastyczność</h3>
+                    <p>Dostosowanie do potrzeb.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Kompleksowa obsługa</h3>
+                    <p>Od A do Z.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section">
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <h3>Jak daleko możecie dojechać z Waszą "Droną Eventową"?</h3>
+                <p>Obsługujemy wydarzenia w całej Polsce, a w przypadku większych imprez, jesteśmy otwarci na wyjazdy
+                    zagraniczne. Nasze mobilne stanowiska pozwalają nam dotrzeć do niemal każdej, nawet najbardziej
+                    wymagającej lokalizacji – od centrum miasta po odległe tereny piknikowe.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Czy oferujecie opcje wegetariańskie/wegańskie/bezglutenowe?</h3>
+                <p>Tak! Nasze menu jest w pełni elastyczne i dostosowujemy je do wymagań dietetycznych gości. W trakcie
+                    planowania menu z Klientem, zawsze proponujemy szeroki wybór opcji wege, wegańskich oraz dań bez
+                    glutenu, używając specjalnie dedykowanych składników.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Jakie są wymagania techniczne na miejscu eventu?</h3>
+                <p>Nasze mobilne stacje są w dużej mierze samowystarczalne. Potrzebujemy jedynie stabilnej, równej
+                    powierzchni. Dostęp do prądu jest mile widziany, ale posiadamy własne ciche generatory, które możemy
+                    uruchomić w razie potrzeby.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Jaki jest minimalny czas rezerwacji?</h3>
+                <p>Zalecamy rezerwację na minimum 2-3 miesiące przed planowaną datą, szczególnie w sezonie letnim, aby
+                    zagwarantować dostępność terminów i najlepszych składników. Oczywiście, w miarę możliwości
+                    obsługujemy także last minute!</p>
+            </div>
+            <div class="faq-item">
+                <h3>Czy zapewniacie obsługę kelnerską?</h3>
+                <p>Tak! W ramach kompleksowej obsługi zapewniamy profesjonalny zespół kelnerski, który zadba o komfort
+                    Twoich gości. Nasi kelnerzy są doświadczeni w obsłudze eventów różnego typu i gwarantują najwyższy
+                    poziom usług.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Ile osób możecie obsłużyć jednocześnie?</h3>
+                <p>Nasze mobilne stacje są skalowalne – od kameralnych spotkań dla 20 osób, po wielkie eventy dla
+                    kilkuset gości. W zależności od wielkości wydarzenia, dostosowujemy liczbę stanowisk i personelu,
+                    aby zapewnić płynną obsługę bez kolejek.</p>
+            </div>
+        </section>
+
+        <section id="realizacje">
+            <div class="parallax-section">Zobacz nasze realizacje</div>
+        </section>
+
+        <section id="kontakt" class="section">
+            <h2>Kontakt</h2>
+            <form class="contact-form" id="form">
+                <div class="form-group">
+                    <label>Imię *</label>
+                    <input type="text" name="name" required />
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label>Telefon *</label>
+                    <input type="tel" name="phone" required />
+                </div>
+                <div class="form-group">
+                    <label>Data wydarzenia *</label>
+                    <input type="date" name="date" required />
+                </div>
+                <div class="form-group">
+                    <label>Orientacyjna ilość osób *</label>
+                    <select name="guests" required>
+                        <option value="">Wybierz ilość osób</option>
+                        <option value="10-30">10-30 osób</option>
+                        <option value="30-50">30-50 osób</option>
+                        <option value="50-100">50-100 osób</option>
+                        <option value="100-200">100-200 osób</option>
+                        <option value="200+">200+ osób</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Orientacyjny budżet (PLN) *</label>
+                    <select name="budget" required>
+                        <option value="">Wybierz budżet</option>
+                        <option value="2000">2 000 PLN</option>
+                        <option value="4000">4 000 PLN</option>
+                        <option value="6000">6 000 PLN</option>
+                        <option value="8000">8 000 PLN</option>
+                        <option value="10000">10 000 PLN</option>
+                        <option value="10000+">10 000+ PLN</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label>Typ wydarzenia *</label>
+                    <select name="event_type" required>
+                        <option value="">Wybierz typ wydarzenia</option>
+                        <option value="event_firmowy">Event firmowy</option>
+                        <option value="festiwal">Festiwal</option>
+                        <option value="piknik">Piknik</option>
+                        <option value="wesele">Wesele</option>
+                        <option value="urodziny">Urodziny</option>
+                        <option value="inne">Inne</option>
+                    </select>
+                </div>
+                <div class="form-group full-width">
+                    <label>Wybierz stacje *</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="station_grill" name="stations" value="grill">
+                            <label for="station_grill">Slow BBQ Grill</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="station_wok" name="stations" value="wok">
+                            <label for="station_wok">Azjatycki Wok</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="station_lody" name="stations" value="lody">
+                            <label for="station_lody">Lody</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="station_gotowanie" name="stations" value="gotowanie">
+                            <label for="station_gotowanie">Live Cooking</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group full-width">
+                    <label>Wiadomość</label>
+                    <textarea name="message"></textarea>
+                </div>
+                <button type="submit" class="cta-primary">Wyślij zapytanie</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 onclick="scrollToTop()" style="cursor: pointer;">RARICART</h3>
+                <p onclick="scrollToTop()" style="cursor: pointer;">Live food station</p>
+                <p>© 2025</p>
+            </div>
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p><a href="tel:+48123456789" class="phone-link">📞 +48 123 456 789</a></p>
+                <p><a href="mailto:kontakt@raricart.pl">✉️ kontakt@raricart.pl</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Linki</h3>
+                <a href="#onas">O nas</a>
+                <a href="#oferta">Oferta</a>
+                <a href="#dlaczego">Dlaczego my</a>
+                <a href="#faq">FAQ</a>
+                <a href="#realizacje">Realizacje</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+            <div class="footer-section">
+                <h3>Social Media</h3>
+                <div class="social-links">
+                    <a href="#" title="Facebook">📘 Facebook</a>
+                    <a href="#" title="Instagram">📷 Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImg" src="" alt="">
+            <div class="modal-description">
+                <h3 id="modalTitle"></h3>
+                <div id="modalText"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
